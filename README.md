@@ -4,8 +4,79 @@ This glossary provides brief explanations of common terms and concepts related t
 
 ## A
 
-### AJAX
-AJAX stands for Asynchronous JavaScript and XML. It is a technique used in web development to create asynchronous web applications. With AJAX, web pages can send and receive data from a server asynchronously without interfering with the display and behavior of the existing page.
+### Array
+
+A data structure that stores a collection of elements, typically of the same type, accessible by an index.
+
+### Arrow Function
+
+A concise way to write anonymous function expressions in JavaScript using the `=>` syntax.
+
+### Async/Await
+
+A pair of keywords used to work with asynchronous code in a more synchronous-like manner, introduced in ES8 (ECMAScript 2017).
+
+### API (Application Programming Interface)
+
+A set of rules and protocols that allows different software applications to communicate with each other.
+
+### AJAX (Asynchronous JavaScript and XML)
+
+A technique for creating interactive web applications by exchanging data with a server asynchronously without reloading the page.
+
+### Argument
+
+A value passed to a function when calling it, which can be accessed within the function.
+
+### Assignment Operator (`=`)
+
+An operator used to assign a value to a variable.
+
+### Array Method
+
+A function that operates on arrays to perform tasks like adding, removing, or transforming elements.
+
+### Arithmetic Operator
+
+Operators used to perform arithmetic operations, such as addition (+), subtraction (-), multiplication (*), division (/), and modulus (%).
+
+### Access Modifiers
+
+Keywords used to specify the accessibility of class members in object-oriented programming languages.
+
+### Abstraction
+
+The process of hiding the implementation details and showing only the essential features of an object or function.
+
+### Algorithm
+
+A set of step-by-step instructions for solving a problem or completing a task, often expressed as pseudocode or in a programming language.
+
+### Authentication
+
+The process of verifying the identity of a user or system, often used in web applications to restrict access to certain resources.
+
+### Animation
+
+The process of creating the illusion of motion by displaying a series of images or frames in rapid succession.
+
+### API Endpoint
+
+A specific URL where an API can be accessed and interacted with.
+
+### Array Index
+
+The position of an element in an array, starting from zero for the first element.
+
+### AJV (Another JSON Schema Validator)
+
+A popular library for validating JSON data against JSON Schema definitions.
+
+### Abstract Class
+
+A class that cannot be instantiated and is typically used as a base class for other classes to inherit from.
+
+
 
 ## C
 
