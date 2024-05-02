@@ -76,6 +76,52 @@ A popular library for validating JSON data against JSON Schema definitions.
 
 A class that cannot be instantiated and is typically used as a base class for other classes to inherit from.
 
+## B
+
+### Boolean
+
+A data type that can have one of two values: true or false.
+
+### Break
+
+A keyword used to exit a loop prematurely, skipping the remaining iterations.
+
+### Bitwise
+
+Refers to operators that perform bitwise operations on binary representations of numbers.
+
+### Block
+
+A group of statements enclosed in curly braces { }, often used to define scope in JavaScript.
+
+### Block Scope
+
+The scope of variables defined within a block, such as within a function or loop.
+
+### Break Statement
+
+A statement used to exit a loop or switch statement prematurely.
+
+### Browser Object Model (BOM)
+
+A set of objects provided by web browsers, which expose the browser functionality to JavaScript.
+
+### Bind
+
+A method used to create a new function that, when called, has a specified 'this' value and optional initial arguments.
+
+### Buffer
+
+A temporary storage location used to hold data during input and output operations.
+
+### Babel
+
+A JavaScript compiler that transforms modern JavaScript code into backward-compatible versions for older browsers.
+
+### Bubble Sort
+
+A sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
+
 
 
 ## C
