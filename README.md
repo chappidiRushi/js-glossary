@@ -160,6 +160,11 @@ An Immediately Invoked Function Expression (IIFE) is a JavaScript design pattern
 ### Promise
 A Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises provide a cleaner and more flexible way to work with asynchronous code compared to traditional callback-based approaches.
 
+## S
+
+### Statements
+Statements are syntax constructs and commands that perform actions.
+
 ## V
 
 ### Variable
