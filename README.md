@@ -145,6 +145,10 @@ An event is a signal that indicates that a specific action has occurred. In Java
 ### Event Listener
 An event listener is a function that listens for a specific event to occur and executes a specified piece of code (the event handler) in response to that event.
 
+### Event delegation
+
+Event delegation is a technique in JavaScript where you attach an event listener to a parent element instead of attaching it to the individual child elements. When an event occurs on a child element, it "bubbles" up through the DOM hierarchy to the parent element. The event listener on the parent element can then check the event.target property to determine which child element triggered the event.
+
 ## F
 
 ### Function
