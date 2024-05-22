@@ -155,6 +155,14 @@ A function is a block of reusable code that performs a specific task or calculat
 ### IIFE
 An Immediately Invoked Function Expression (IIFE) is a JavaScript design pattern that involves defining and immediately executing a function. This pattern is often used to create a private scope for variables and functions, preventing them from polluting the global namespace.
 
+## H
+
+### Hoisting
+Hoisting in JavaScript refers to the process where variable and function declarations are moved to the top of their containing scope during the compilation phase. This means you can use variables and functions before they are declared in the code.
+For variables declared with var, the declaration is hoisted, but the initialization is not.
+For variables declared with let and const, the declaration is hoisted, but they are not initialized until the code execution reaches the declaration. This results in a "temporal dead zone" where accessing the variable before its declaration will throw a ReferenceError.
+
+
 ## P
 
 ### Promise
