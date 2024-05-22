@@ -166,6 +166,11 @@ Hoisting in JavaScript refers to the process where variable and function declara
 For variables declared with var, the declaration is hoisted, but the initialization is not.
 For variables declared with let and const, the declaration is hoisted, but they are not initialized until the code execution reaches the declaration. This results in a "temporal dead zone" where accessing the variable before its declaration will throw a ReferenceError.
 
+## N
+
+### Null
+null is a primitive value, it represents the intentional absence of any value. It's often used to explicitly indicate that a variable or object property does not have a value.
+
 
 ## P
 
@@ -176,6 +181,11 @@ A Promise is an object that represents the eventual completion (or failure) of a
 
 ### Statements
 Statements are syntax constructs and commands that perform actions.
+
+## U
+
+### Undefined
+undefined is a primitive value in JavaScript that is automatically assigned to variables that have not been initialized or to object properties that do not exist.
 
 ## V
 
