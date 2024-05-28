@@ -26,7 +26,7 @@ A technique for creating interactive web applications by exchanging data with a 
 
 ### Argument
 
-A value passed to a function when calling it, which can be accessed within the function.
+Actual values passed to the function when it is invoked.
 
 ### Assignment Operator (`=`)
 
@@ -149,6 +149,10 @@ An event listener is a function that listens for a specific event to occur and e
 
 Event delegation is a technique in JavaScript where you attach an event listener to a parent element instead of attaching it to the individual child elements. When an event occurs on a child element, it "bubbles" up through the DOM hierarchy to the parent element. The event listener on the parent element can then check the event.target property to determine which child element triggered the event.
 
+### Event loop
+
+Event loop is a fundamental conecpt in JavaScript that allows for asynchronous programmind despite Javascrpt being a single-threaded.
+
 ## F
 
 ### Function
@@ -176,6 +180,12 @@ null is a primitive value, it represents the intentional absence of any value. I
 
 ### Promise
 A Promise is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises provide a cleaner and more flexible way to work with asynchronous code compared to traditional callback-based approaches.
+
+### Parameters
+ Variables listed as part of the function definition.
+
+### prototypal inheritance
+In JavaScript, prototypal inheritance allows objects to inherit properties and methods from other objects.
 
 ## S
 
