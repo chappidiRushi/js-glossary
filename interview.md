@@ -216,3 +216,243 @@ const numbers = [1, 2, 3, 4];
 const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 console.log(sum); // Output: 10
 ```
+
+**Question:** What are the different ways to create objects in JavaScript?
+
+**Answer:**
+
+### Different Ways to Create Objects in JavaScript
+
+1. **Object Literal Syntax**
+   - This is the most common and simplest way to create an object.
+   - Example:
+
+     ```javascript
+     let obj = {};
+     ```
+
+2. **`Object.create()` Method**
+   - This method creates a new object with the specified prototype object and properties.
+   - Example:
+
+     ```javascript
+     let objCreate = Object.create({});
+     ```
+
+3. **`new Object()` Syntax**
+   - This method creates an instance of the `Object` type.
+   - Example:
+
+     ```javascript
+     let newObj = new Object();
+     ```
+
+4. **Constructor Functions**
+   - A constructor function is used to create multiple instances of an object with the same properties and methods.
+   - Example:
+
+     ```javascript
+     function Person(name, age) {
+       this.name = name;
+       this.age = age;
+     }
+
+     let person1 = new Person('Alice', 30);
+     let person2 = new Person('Bob', 25);
+     ```
+
+5. **ES6 Classes**
+   - Classes are a syntactical sugar over constructor functions and provide a more intuitive way to create objects and handle inheritance.
+   - Example:
+
+     ```javascript
+     class Person {
+       constructor(name, age) {
+         this.name = name;
+         this.age = age;
+       }
+
+       greet() {
+         console.log(`Hello, my name is ${this.name}`);
+       }
+     }
+
+     let person1 = new Person('Alice', 30);
+     let person2 = new Person('Bob', 25);
+     ```
+
+6. **Factory Functions**
+   - A factory function returns a new object every time it is called.
+   - Example:
+
+     ```javascript
+     function createPerson(name, age) {
+       return {
+         name: name,
+         age: age,
+         greet() {
+           console.log(`Hello, my name is ${this.name}`);
+         }
+       };
+     }
+
+     let person1 = createPerson('Alice', 30);
+     let person2 = createPerson('Bob', 25);
+     ```
+
+<hr>
+
+### What are arrow functions in JavaScript, and how do they differ from regular functions?
+
+**Arrow functions** are a shorter syntax for writing functions in JavaScript. They are anonymous and lexically bind the `this` value, meaning `this` inside an arrow function refers to the context in which the function was defined, not the context from which it was called.
+
+#### Syntax
+
+```javascript
+// Regular function
+function add(a, b) {
+  return a + b;
+}
+
+// Arrow function
+const add = (a, b) => a + b;
+```
+
+#### Key Differences from Regular Functions
+
+1. **Syntax:** Arrow functions have a more concise syntax.
+1. **this Binding:** In regular functions, `this` refers to the object that called the function, which could change depending on how the function is called. In arrow functions, `this` is lexically bound to the surrounding context.
+
+```javascript
+function Person() {
+  this.age = 0;
+
+  setInterval(function growUp() {
+    this.age++; // `this` refers to the global object, not the instance of Person
+  }, 1000);
+}
+
+function Person() {
+  this.age = 0;
+
+  setInterval(() => {
+    this.age++; // `this` refers to the instance of Person
+  }, 1000);
+}
+
+```
+
+ 3. **arguments Object:** Arrow functions do not have their own arguments object. If you need to access the arguments object, you need to use a regular function.
+
+ ```javascript
+ // Regular function
+function sum() {
+  return Array.from(arguments).reduce((acc, val) => acc + val, 0);
+}
+
+// Arrow function (doesn't have `arguments` object)
+const sum = () => {
+  // `arguments` object is not available here
+};
+```
+
+ 4. **Cannot be used as constructors:** Arrow functions cannot be used with the `new` keyword. They do not have a `prototype` property.
+
+ ```javascript
+// Regular function
+function Car(make, model) {
+  this.make = make;
+  this.model = model;
+}
+
+const myCar = new Car('Toyota', 'Corolla'); // Works fine
+
+// Arrow function
+const Car = (make, model) => {
+  this.make = make;
+  this.model = model;
+};
+
+const myCar = new Car('Toyota', 'Corolla'); // TypeError: Car is not a constructor
+
+ ```
+
+### What is the `async`/`await` syntax in JavaScript, and how does it improve working with Promises?
+
+**`async`/`await`** is a syntactic sugar introduced in ES2017 that makes it easier to work with Promises, providing a cleaner and more readable way to write asynchronous code compared to the traditional `.then()` and `.catch()` methods.
+
+#### `async` Keyword
+
+- The `async` keyword is used to declare an asynchronous function. An async function always returns a Promise.
+- If the function returns a value, the Promise will be resolved with that value.
+- If the function throws an error, the Promise will be rejected with that error.
+
+#### `await` Keyword
+
+- The `await` keyword can only be used inside an async function.
+- It pauses the execution of the async function and waits for the Promise to resolve.
+- Once the Promise is resolved, it returns the resolved value.
+- If the Promise is rejected, it throws the error.
+
+#### Example
+
+**Using Promises:**
+
+```javascript
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Data received');
+    }, 2000);
+  });
+}
+
+fetchData()
+  .then(data => {
+    console.log(data); // Output after 2 seconds: Data received
+  })
+  .catch(error => {
+    console.error(error);
+  });
+```
+
+**Using `asnc`/`await`:**
+
+```javascript
+
+async function fetchDataAsync() {
+  try {
+    const data = await fetchData();
+    console.log(data); // Output after 2 seconds: Data received
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+fetchDataAsync();
+
+```
+
+#### Advantages of `async`/`await`
+
+1. **Readability**: Makes the asynchronous code look synchronous, which is easier to read and understand.
+2. **Error Handling**: Can use `try...catch` blocks for error handling, making it more consistent with synchronous code.
+3. **Simplified Syntax**: Reduces the need for chaining `.then()` and `.catch()` methods, which can become difficult to read with multiple nested asynchronous operations.
+
+
+**Question:** Explain the concept of event bubbling and event capturing in JavaScript.
+
+**Answer:**
+
+### Event Bubbling and Event Capturing in JavaScript
+
+**Event Bubbling**:
+- When an event occurs on an element, it will bubble up through its ancestors in the DOM tree, triggering any event listeners attached to those elements.
+- This means that if an event listener is attached to a parent element, it will also be triggered when the same event occurs on a child element.
+- Bubbling occurs from the target element up to the root of the DOM tree (HTML element).
+
+**Event Capturing**:
+- Event capturing is the opposite of event bubbling.
+- When an event occurs, it starts from the root of the DOM tree and travels down to the target element.
+- This allows you to intercept events at an ancestor level before they reach the target element.
+- Event capturing is less commonly used than event bubbling, but it can be useful in certain scenarios, such as global event handling.
