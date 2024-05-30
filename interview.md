@@ -439,7 +439,6 @@ fetchDataAsync();
 2. **Error Handling**: Can use `try...catch` blocks for error handling, making it more consistent with synchronous code.
 3. **Simplified Syntax**: Reduces the need for chaining `.then()` and `.catch()` methods, which can become difficult to read with multiple nested asynchronous operations.
 
-
 **Question:** Explain the concept of event bubbling and event capturing in JavaScript.
 
 **Answer:**
@@ -447,12 +446,43 @@ fetchDataAsync();
 ### Event Bubbling and Event Capturing in JavaScript
 
 **Event Bubbling**:
+
 - When an event occurs on an element, it will bubble up through its ancestors in the DOM tree, triggering any event listeners attached to those elements.
 - This means that if an event listener is attached to a parent element, it will also be triggered when the same event occurs on a child element.
 - Bubbling occurs from the target element up to the root of the DOM tree (HTML element).
 
 **Event Capturing**:
+
 - Event capturing is the opposite of event bubbling.
 - When an event occurs, it starts from the root of the DOM tree and travels down to the target element.
 - This allows you to intercept events at an ancestor level before they reach the target element.
 - Event capturing is less commonly used than event bubbling, but it can be useful in certain scenarios, such as global event handling.
+
+<hr>
+
+### Explain the difference between JavaScript's `setTimeout()` and `setInterval()` functions, and provide examples of their usage
+
+#### `setTimeout()` Function**
+
+ 1. The `setTimeout()` function is used to execute a function once after a specified delay (in milliseconds).
+ 1. It executes the function only once.
+ 1. After the specified delay, the function is added to the event queue and executed when the call stack is empty.
+ 1. It returns a timer ID that can be used to cancel the execution of the function before it occurs.
+
+ ```javascript
+setTimeout(() => {   console.log('This message will be logged after 2 seconds.'); }, 2000);
+```
+
+#### **`setInterval()` Function**
+
+1. The `setInterval()` function is used to repeatedly execute a function at a specified interval (in milliseconds).
+1. It keeps executing the function at the specified interval until it is explicitly canceled using `clearInterval()`.
+1. Each execution of the function is added to the event queue at the specified interval.
+1. It returns a timer ID that can be used to cancel the repeated execution of the function.
+
+```javascript
+let counter = 0; const intervalId = setInterval(() => {   console.log(`Counter: ${counter}`);   counter++;   if (counter === 5) {     clearInterval(intervalId); // Cancels the interval after 5 executions   } }, 1000);``
+```
+
+1. It's important to be cautious when using `setInterval()` as it may lead to performance issues if the interval is too short or if the function takes a long time to execute.
+1. Always remember to clear the interval using `clearInterval()` when you no longer need it to avoid memory leaks and unnecessary resource consumption.
