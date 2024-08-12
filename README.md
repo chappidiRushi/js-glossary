@@ -134,6 +134,22 @@ A callback function, often referred to simply as a callback, is a function that 
 
 ## D
 
+### Destructuring
+A syntax for unpacking values from arrays or properties from objects into distinct variables.
+
+### Example:
+```js
+// Array Destructuring
+const [a, b] = [1, 2];
+console.log(a); // Outputs: 1
+console.log(b); // Outputs: 2
+
+// Object Destructuring
+const { x, y } = { x: 10, y: 20 };
+console.log(x); // Outputs: 10
+console.log(y); // Outputs: 20
+```
+
 ### DOM
 The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of HTML and XML documents as a tree-like structure, allowing programs to dynamically access and manipulate the content, structure, and style of web documents.
 
@@ -163,12 +179,40 @@ A function is a block of reusable code that performs a specific task or calculat
 ### IIFE
 An Immediately Invoked Function Expression (IIFE) is a JavaScript design pattern that involves defining and immediately executing a function. This pattern is often used to create a private scope for variables and functions, preventing them from polluting the global namespace.
 
+### Inheritance
+A way to create a new object or class that uses properties and methods from an existing object or class.
+
+#### Example:
+```js
+// Parent class
+class Animal {
+  speak() {
+    console.log('Animal makes a sound.');
+  }
+}
+// Child class inherits from Animal
+class Dog extends Animal {
+  bark() {
+    console.log('Dog barks.');
+  }
+}
+const dog = new Dog();
+dog.speak(); // Outputs: Animal makes a sound.
+dog.bark();  // Outputs: Dog barks.
+```
+
 ## H
 
 ### Hoisting
 Hoisting in JavaScript refers to the process where variable and function declarations are moved to the top of their containing scope during the compilation phase. This means you can use variables and functions before they are declared in the code.
 For variables declared with var, the declaration is hoisted, but the initialization is not.
 For variables declared with let and const, the declaration is hoisted, but they are not initialized until the code execution reaches the declaration. This results in a "temporal dead zone" where accessing the variable before its declaration will throw a ReferenceError.
+
+## M
+
+### Map
+A collection of key-value pairs where both keys and values can be of any type. Keys are unique and are maintained in insertion order.
+
 
 ## N
 
@@ -189,8 +233,16 @@ In JavaScript, prototypal inheritance allows objects to inherit properties and m
 
 ## S
 
+### Set
+A collection of unique values where each value can only occur once. Values are maintained in insertion order.
+
 ### Statements
 Statements are syntax constructs and commands that perform actions.
+
+## T
+
+### Template Literal
+A string literal allowing embedded expressions, multi-line strings, and variable interpolation using backticks (\` \`).
 
 ## U
 
@@ -202,3 +254,19 @@ undefined is a primitive value in JavaScript that is automatically assigned to v
 ### Variable
 A variable is a named storage location that holds data. In JavaScript, variables can store various types of data, including numbers, strings, objects, and functions. Variables can be declared using the `var`, `let`, or `const` keywords.
 
+
+
+## == (Loose Equality)
+Compares two values for equality after converting both to a common type.
+
+## === (Strict Equality)
+Compares two values for equality without type conversion; both type and value must match.
+
+## ? (Conditional/Ternary Operator)
+A shorthand for `if-else` statements, returning one value if a condition is true and another if false.
+
+## && (Logical AND)
+Returns true if both operands are true; otherwise, returns false.
+
+## ! (Logical NOT)
+Inverts the truthiness of the operand; true becomes false, and false becomes true.
